@@ -1,0 +1,9 @@
+<input type="text" ng-change="getNewData()" ng-model="searchAll.query" placeholder="{{prompt}}" ng-keydown="selected=false" />
+<br/>
+
+<div class="items" ng-hide="!searchAll.length || selected">
+  <div class="item" ng-repeat="item in items | filter:searchAll  track by $index" ng-click="handleSelection(item[title])" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
+    <p class="title">{{item[title]}}</p>
+    <p class="subtitle">{{item[subtitle]}}</p>
+  </div>
+</div>

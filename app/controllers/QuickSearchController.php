@@ -97,7 +97,7 @@ class QuickSearchController extends \BaseController {
 			if(strlen($birthday) > 4)
 			{
 				$date = $birthday;
-				$birthday1 = substr($date,0,2).''.substr($date,2,2).'/19'.substr($date,4);
+				$birthday1 = substr($date,0,2).'/'.substr($date,2,2).'/19'.substr($date,4);
 			}
 
 			if($concat != '')

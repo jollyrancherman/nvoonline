@@ -25,7 +25,7 @@ NVO Online - Quick Search
 						<option value="ALA">Alachua</option>
 						<option value="">Brevard</option>
 						<option value="">Broward Polk</option>
-						<option value="">Lake</option>
+						<option value="LAK">Lake</option>
 						<option value="">Volusia</option>
 						<option value="">Miami-Dade</option>
 						<option value="ORA">Orange</option>

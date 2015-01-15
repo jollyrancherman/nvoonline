@@ -17,23 +17,13 @@ class UsersTableSeeder extends Seeder {
         ));
         User::create(array(
                 'id' => 2,
-                'email' => 'ljordan@douglas.nv.gov',
-                'password' => Hash::make('ljordan'),
+                'email' => 'petitionman@gmail.com',
+                'password' => Hash::make('steved'),
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime,
                 'activated' => 1,
-                'first_name' => 'Joe',
-                'last_name' => 'Smoe',
-        ));
-        User::create(array(
-                'id' => 3,
-                'email' => 'lkeith@douglas.nv.gov',
-                'password' => Hash::make('lkeith'),
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime,
-                'activated' => 1,
-                'first_name' => 'Lesley',
-                'last_name' => 'Keith',
+                'first_name' => 'Steve',
+                'last_name' => 'Drattell',
         ));
     }
 }

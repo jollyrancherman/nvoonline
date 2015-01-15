@@ -16,6 +16,7 @@ NVO Online - Quick Search
 <div class="row" ng-controller="QuickSearchCtrl">
 
 	<div class="col-xs-12">
+
 		<div class="col-md-3">
 			<form class="sidebar-search">
 				<div class="form-group">
@@ -36,6 +37,14 @@ NVO Online - Quick Search
 			</form>
 		</div>
 
+		<div class="col-md-9">
+			<div class="row" ng-repeat="voter in voters">
+				<div class="col-sm-4">@{{ voter.last }}, @{{ voter.first }} @{{ voter.middle }}</div>
+				<div class="col-sm-5">@{{ voter.street }}, @{{ voter.city }} @{{ voter.zip }}</div>
+				<div class="col-sm-3">@{{ voter.birthday }}</div>
+
+			</div>
+		</div>
 	</div>
 
 </div>

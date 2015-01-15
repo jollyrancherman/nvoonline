@@ -4,7 +4,10 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory',
 		$scope.voters = {};
 
 		$scope.query = function (searchArray) {
-			SearchFactory.getResults(searchArray)
+ 			SearchFactory.getResults(searchArray)
+ 				.success(function(data){
+ 					$scope.voters = data;
+ 				});
 		};
 
 	}//end of Dependancy Injection

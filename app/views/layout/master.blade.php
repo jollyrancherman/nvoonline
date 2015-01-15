@@ -86,7 +86,7 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<p style="color:#FFF; font-size:1.5em;margin:10px 0">CSYC Database</p>
+			<p style="color:#FFF; font-size:1.5em;margin:10px 0">NVO Online</p>
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
 
@@ -125,7 +125,6 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					@include('layout._searchAll')
 
 				  @yield('page')
 				</div>
@@ -142,7 +141,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 {{ Carbon::now()->format('Y') }}&copy; China Spring Youth Camp
+		 {{ Carbon::now()->format('Y') }}&copy; NVO Online
 	</div>
 	<div class="scroll-to-top">
 		<i class="icon-arrow-up"></i>

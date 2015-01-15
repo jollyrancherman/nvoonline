@@ -30,85 +30,18 @@
 				<li>
 					<a href="/reports">
 					<i class="fa fa-file-text"></i>
-					<span class="title">Reports</span>
+					<span class="title">Quick Search</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
 							<a href="/reports">
-							Summary</a>
-						</li>
-						<li>
-							<a href="/reports/ART">
-							ART</a>
-						</li>
-						<li>
-							<a href="/reports/ForwardThinking">
-							Character Notes</a>
-						</li>
-						<li>
-							<a href="/reports/ForwardThinking">
-							Contact Entries</a>
-						</li>
-						<li>
-							<a href="/reports/ForwardThinking">
-							Forward Thinking</a>
+							Florida</a>
 						</li>
 					</ul>
 				</li>
 
-				<!-- DOCUMENTS -->
-<!-- 				<li>
-					<a href="javascript:;">
-					<i class="fa fa-file-text"></i>
-					<span class="title">Documents</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							Empty</a>
-						</li>
-					</ul>
-				</li> -->
-
-				<!-- MEDICAL -->
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-medkit"></i>
-					<span class="title">Medical</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							Empty</a>
-						</li>
-					</ul>
-				</li>
-
-				<!-- TREATMENT -->
-				<li>
-					<a href="javascript:;">
-					<i class="fa fa-book"></i>
-					<span class="title">Treatment</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="#">
-							ART</a>
-						</li>
-						<li>
-							<a href="/treatment/forwardThinking">
-							Forward Thinking</a>
-						</li>
-						<li>
-							<a href="#">
-							Custom</a>
-						</li>
-					</ul>
-				</li>
+				<!-- LOGOUT -->
 				<li class="last ">
 					<a href="/logout">
 						<i class="fa fa-power-off"></i>

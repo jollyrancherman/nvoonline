@@ -25,7 +25,7 @@
 <body class="login">
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<h3 class="form-title" style="color: #FFF;">China Spring Database</h3>
+	<h3 class="form-title" style="color: #FFF;">NVO Online</h3>
 </div>
 <!-- END LOGO -->
 <!-- MESSAGE TO USER -->
@@ -77,7 +77,7 @@
 <!-- END LOGIN -->
 <!-- BEGIN COPYRIGHT -->
 <div class="copyright">
-	 {{-- Carbon::now()->format('Y') --}} &copy; China Spring Youth Camp
+	 {{-- Carbon::now()->format('Y') --}} &copy; directdemocracy.com
 </div>
 <!-- END COPYRIGHT -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

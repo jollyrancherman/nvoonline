@@ -1,6 +1,4 @@
 <script>
-  var csycApp = angular.module('csycApp', []);
+  var nvoApp = angular.module('nvoApp', []);
 </script>
-<script src="/app/SearchAll/SearchAllController.js"></script>
-<script src="/app/Treatment/ForwardThinkingController.js"></script>
-<script src="/app/Journal/JournalController.js"></script>
+<script src="/app/QuickSearch/QuickSearchController.js"></script>

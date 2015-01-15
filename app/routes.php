@@ -15,55 +15,16 @@ Route::group(['before' => 'auth'], function()
 
 	Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index'] );
 
-	/*===============================
-	=            REPORTS            =
-	===============================*/
-	Route::get('/reports', ['as' => 'report', 'uses' => 'ReportsController@index']);
-	Route::get('/reports/ForwardThinking', ['as' => 'report.forwardThinking', 'uses' => 'ReportsController@forwardThinking']);
-	Route::get('/reports/Contact', ['as' => 'report.Contact', 'uses' => 'ReportsController@Contact']);
-	Route::get('/reports/cn', ['as' => 'report.cn', 'uses' => 'ReportsController@cn']);
-	Route::get('/reports/ForwardThinking', ['as' => 'report.forwardThinking', 'uses' => 'ReportsController@forwardThinking']);
-	
-	
-	/*-----  End of REPORTS  ------*/
-	
-	
+	/*===================================
+	=            QUICKSEARCH            =
+	===================================*/
+	Route::get('/quicksearch', ['as' => 'quicksearch', 'uses' => 'QuickSearchController@index']);
+	Route::post('/quicksearch/api', ['as' => 'quicksearch', 'uses' => 'QuickSearchController@api']);
 
 
+	/*-----  End of QUICKSEARCH  ------*/
 
 
-	/*================================
-	=            RESIDENT            =
-	================================*/
-	Route::get('/resident/{id}', 'ResidentController@getByID');
-
-
-	/*-----  End of RESIDENT  ------*/
-
-
-
-	/*=================================
-	=            SEARCHBAR            =
-	=================================*/
-	Route::post('/searchAll', 'SearchController@searchAll');
-	Route::get('/searchAll/api/all', 'SearchController@getAll');
-	Route::get('/searchAll/api/{query}', 'SearchController@searchAllApi');
-
-
-	/*-----  End of SEARCHBAR  ------*/
-
-	/*=================================
-	=            TREATMENT            =
-	=================================*/
-
-	Route::get('/treatment/forwardThinking', 'TreatmentController@forwardThinking');
-	Route::get('/treatment/forwardThinking/api', 'TreatmentController@forwardThinkingAPI');
-	Route::post('/treatment/forwardThinking/update', 'TreatmentController@update');
-	Route::get('/treatment/forwardThinking/getJournals/{id}', 'TreatmentController@getJournals');
-	Route::post('/treatment/forwardThinking/updateJournal', 'TreatmentController@updateJournals');
-
-
-	/*-----  End of TREATMENT  ------*/
 
 
 

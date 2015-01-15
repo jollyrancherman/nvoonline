@@ -28,15 +28,15 @@
 
 				<!-- REPORTS -->
 				<li>
-					<a href="/reports">
-					<i class="fa fa-file-text"></i>
-					<span class="title">Quick Search</span>
+					<a href="/Tools">
+					<i class="fa fa-wrench"></i>
+					<span class="title">Tools</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="/reports">
-							Florida</a>
+							<a href="/quicksearch">
+							Quick Search</a>
 						</li>
 					</ul>
 				</li>

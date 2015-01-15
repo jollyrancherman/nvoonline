@@ -23,13 +23,13 @@ NVO Online - Quick Search
 					<select  ng-change="query(search)" ng-model="search.county" name="county" class="form-control">
 						<option value="">County</option>
 						<option value="ALA">Alachua</option>
-						<option value="">Brevard</option>
+						<option value="BRE">Brevard</option>
 						<option value="">Broward Polk</option>
 						<option value="LAK">Lake</option>
 						<option value="">Miami-Dade</option>
 						<option value="ORA">Orange</option>
-						<option value="">Osceola</option>
-						<option value="">Palm Beach</option>
+						<option value="OSC">Osceola</option>
+						<option value="PAL">Palm Beach</option>
 						<option value="SEM">Seminole</option>
 						<option value="VOL">Volusia</option>
 					</select>
@@ -42,6 +42,7 @@ NVO Online - Quick Search
 				<input type="text" ng-change="query(search)" ng-model="search.voter_id" class="quicksearch-input form-control" placeholder="Voter ID">
 				<input type="text" ng-change="query(search)" ng-model="search.birthday" class="quicksearch-input form-control" placeholder="Birthday">
 			</form>
+			<div id="spinner"><i class="fa fa-spinner fa-spin fa-5x" style="color:red"></i></div>
 		</div>
 
 		<div class="col-md-9">

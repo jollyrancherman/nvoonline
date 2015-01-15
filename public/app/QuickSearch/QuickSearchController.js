@@ -1,13 +1,22 @@
 nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory',
 	function ($scope, $http, SearchFactory) {
 
+		$('#spinner').hide();
+
 		$scope.voters = {};
 
 		$scope.query = function (searchArray) {
+			$('#spinner').show();
  			SearchFactory.getResults(searchArray)
  				.success(function(data){
+
+					$('#spinner').hide();
  					$scope.voters = data;
- 				});
+
+ 				})
+	 			.error(function(data){
+	 				$('#spinner').hide();
+	 			}); 				;
 		};
 
 	}//end of Dependancy Injection

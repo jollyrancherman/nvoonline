@@ -21,16 +21,60 @@ class QuickSearchController extends \BaseController {
 	 */
 	public function api()
 	{
-		$i = Input::all();
-		$first = $i['first'];
-		$last = $i['last'];
-		$street = $i['street'];
-		$city = $i['city'];
-		$zip = $i['zip'];
-		$birthday = $i['birthday'];
-		$county = $i['county'];
+		$input = Input::all();
+		$i = $input['params'];
 
-		dd($first);
+		foreach ($i as $k => $v) {
+			${$k} = $v;
+		};
+
+		$concat = '';
+
+		if(isset($first) && ($first != ''))
+		{
+			$concat .= ' MATCH(first) AGAINST (\''.$first.'*\' IN BOOLEAN MODE)';
+		}
+
+		if(isset($last) && ($last != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= ' MATCH(last) AGAINST (\''.$last.'*\' IN BOOLEAN MODE)';
+		}
+
+		if(isset($street) && ($street != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= ' MATCH(street) AGAINST (\''.$street.'*\' IN BOOLEAN MODE)';
+		}
+
+		if(isset($city) && ($city != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= ' MATCH(city) AGAINST (\''.$city.'*\' IN BOOLEAN MODE)';
+		}
+
+		if(isset($zip) && ($zip != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'zipcode LIKE \'%'.$zip.'%\'';
+		}
+
+		$voter = VRFlorida::whereRaw($concat)->take(30)->get();
+
+		return $voter;
+
 	}
 
 	/**

@@ -20,7 +20,7 @@ NVO Online - Quick Search
 		<div class="col-md-3">
 			<form class="sidebar-search">
 				<div class="form-group">
-					<select  ng-model="search.county" name="county" class="form-control">
+					<select  ng-change="query(search)" ng-model="search.county" name="county" class="form-control">
 						<option value="">County</option>
 						<option value="ALA">Alachua</option>
 						<option value="">Brevard</option>

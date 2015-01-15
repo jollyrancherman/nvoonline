@@ -46,11 +46,25 @@ class QuickSearchController extends \BaseController {
 
 		if(isset($street) && ($street != ''))
 		{
+			$add_array = explode(' ', $street);
+
+			foreach ($add_array as $v)
+			{
+				if($concat != '')
+				{
+					$concat .= ' AND ';
+				}
+				$concat .= 'street LIKE \'%'.$v.'%\'';
+			}
+		}
+
+		if(isset($voter_id) && ($voter_id != ''))
+		{
 			if($concat != '')
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= ' MATCH(street) AGAINST (\''.$street.'*\' IN BOOLEAN MODE)';
+			$concat .= 'voter_id LIKE \'%'.$voter_id.'%\'';
 		}
 
 		if(isset($city) && ($city != ''))
@@ -71,7 +85,7 @@ class QuickSearchController extends \BaseController {
 			$concat .= 'zipcode LIKE \'%'.$zip.'%\'';
 		}
 
-		$voter = VRFlorida::whereRaw($concat)->take(30)->get();
+		$voter = VRFlorida::where('county','=', $county)->whereRaw($concat)->take(30)->get();
 
 		return $voter;
 

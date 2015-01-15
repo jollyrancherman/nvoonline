@@ -20,12 +20,18 @@ NVO Online - Quick Search
 		<div class="col-md-3">
 			<form class="sidebar-search">
 				<div class="form-group">
-					<select name="county" class="form-control">
-						<option>County</option>
-						<option>Miami-Dade</option>
-						<option>Option 3</option>
-						<option>Option 4</option>
-						<option>Option 5</option>
+					<select  ng-model="search.county" name="county" class="form-control">
+						<option value="">County</option>
+						<option value="ALA">Alachua</option>
+						<option value="">Brevard</option>
+						<option value="">Broward Polk</option>
+						<option value="">Lake</option>
+						<option value="">Volusia</option>
+						<option value="">Miami-Dade</option>
+						<option value="ORA">Orange</option>
+						<option value="">Osceola</option>
+						<option value="">Palm Beach</option>
+						<option value="">Seminole</option>
 					</select>
 				</div>
 				<input type="text" ng-change="query(search)" ng-model="search.first" class="quicksearch-input form-control" placeholder="First Name">
@@ -33,13 +39,14 @@ NVO Online - Quick Search
 				<input type="text" ng-change="query(search)" ng-model="search.street" class="quicksearch-input form-control" placeholder="Street">
 				<input type="text" ng-change="query(search)" ng-model="search.city" class="quicksearch-input form-control" placeholder="City Name">
 				<input type="text" ng-change="query(search)" ng-model="search.zip" class="quicksearch-input form-control" placeholder="Zip Name">
+				<input type="text" ng-change="query(search)" ng-model="search.voter_id" class="quicksearch-input form-control" placeholder="Voter ID">
 				<input type="text" ng-change="query(search)" ng-model="search.birthday" class="quicksearch-input form-control" placeholder="Birthday Name">
 			</form>
 		</div>
 
 		<div class="col-md-9">
 			<div class="row" ng-repeat="voter in voters">
-				<div class="col-sm-4">@{{ voter.last }}, @{{ voter.first }} @{{ voter.middle }}</div>
+				<div class="col-sm-4">@{{ voter.voter_id }}  @{{ voter.last }}, @{{ voter.first }} @{{ voter.middle }}</div>
 				<div class="col-sm-5">@{{ voter.street }}, @{{ voter.city }} @{{ voter.zip }}</div>
 				<div class="col-sm-3">@{{ voter.birthday }}</div>
 

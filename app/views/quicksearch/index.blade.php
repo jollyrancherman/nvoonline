@@ -31,7 +31,7 @@ NVO Online - Quick Search
 						<option value="ORA">Orange</option>
 						<option value="">Osceola</option>
 						<option value="">Palm Beach</option>
-						<option value="">Seminole</option>
+						<option value="SEM">Seminole</option>
 					</select>
 				</div>
 				<input type="text" ng-change="query(search)" ng-model="search.first" class="quicksearch-input form-control" placeholder="First Name">
@@ -47,8 +47,13 @@ NVO Online - Quick Search
 		<div class="col-md-9">
 			<div ng-show="voters.length" >
 				<div class="row" ng-repeat="voter in voters">
-					<div class="col-sm-4">@{{ voter.voter_id }}  @{{ voter.last | name_cap}}, @{{ voter.first }} @{{ voter.middle }}</div>
-					<div class="col-sm-5">@{{ voter.street }}, @{{ voter.city }} @{{ voter.zip }}</div>
+					<div class="col-sm-4">
+						@{{ voter.voter_id }}
+						@{{ voter.last | name_cap}},
+						@{{ voter.first  | name_cap}}
+						@{{ voter.middle  | name_cap}}
+					</div>
+					<div class="col-sm-5">@{{ voter.street }}, @{{ voter.city | name_cap }} @{{ voter.zip }}</div>
 					<div class="col-sm-3">@{{ voter.birthday }}</div>
 				</div>
 			</div>

@@ -26,12 +26,12 @@ NVO Online - Quick Search
 						<option value="">Brevard</option>
 						<option value="">Broward Polk</option>
 						<option value="LAK">Lake</option>
-						<option value="">Volusia</option>
 						<option value="">Miami-Dade</option>
 						<option value="ORA">Orange</option>
 						<option value="">Osceola</option>
 						<option value="">Palm Beach</option>
 						<option value="SEM">Seminole</option>
+						<option value="VOL">Volusia</option>
 					</select>
 				</div>
 				<input type="text" ng-change="query(search)" ng-model="search.first" class="quicksearch-input form-control" placeholder="First Name">

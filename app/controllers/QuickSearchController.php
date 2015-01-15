@@ -21,7 +21,16 @@ class QuickSearchController extends \BaseController {
 	 */
 	public function api()
 	{
-		dd(Input::all());
+		$i = Input::all();
+		$first = $i['first'];
+		$last = $i['last'];
+		$street = $i['street'];
+		$city = $i['city'];
+		$zip = $i['zip'];
+		$birthday = $i['birthday'];
+		$county = $i['county'];
+
+		dd($first);
 	}
 
 	/**

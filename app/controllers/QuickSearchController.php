@@ -85,6 +85,28 @@ class QuickSearchController extends \BaseController {
 			$concat .= 'zipcode LIKE \'%'.$zip.'%\'';
 		}
 
+		if(isset($birthday) && ($birthday != ''))
+		{
+			$birthday1 = $birthday;
+
+			if(strlen($birthday) > 2 && strlen($birthday) < 5)
+			{
+				$date = $birthday;
+				$birthday1 = substr($date,0,2).'/'.substr($date,2);
+			}
+			if(strlen($birthday) > 4)
+			{
+				$date = $birthday;
+				$birthday1 = substr($date,0,2).'/'.substr($date,2,2).'/19'.substr($date,4);
+			}
+
+			if($concat != '')
+			{
+				$concat .= ' AND';
+			}
+			$concat .= " birthday REGEXP '^".$birthday1."'";
+		}
+
 		$voter = VRFlorida::where('county','=', $county)->whereRaw($concat)->take(30)->get();
 
 		return $voter;

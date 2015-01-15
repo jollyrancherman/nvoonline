@@ -40,7 +40,7 @@ NVO Online - Quick Search
 				<input type="text" ng-change="query(search)" ng-model="search.city" class="quicksearch-input form-control" placeholder="City Name">
 				<input type="text" ng-change="query(search)" ng-model="search.zip" class="quicksearch-input form-control" placeholder="Zip Name">
 				<input type="text" ng-change="query(search)" ng-model="search.voter_id" class="quicksearch-input form-control" placeholder="Voter ID">
-				<input type="text" ng-change="query(search)" ng-model="search.birthday" class="quicksearch-input form-control" placeholder="Birthday Name">
+				<input type="text" ng-change="query(search)" ng-model="search.birthday" class="quicksearch-input form-control" placeholder="Birthday">
 			</form>
 		</div>
 

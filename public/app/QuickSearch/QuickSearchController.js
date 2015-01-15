@@ -26,6 +26,11 @@ nvoApp.factory('SearchFactory', ['$http',
 	}//end of Dependancy Injection
 ]);
 
+nvoApp.filter('name_cap', function () {
+    return function(input, all) {
+      return (!!input) ? input.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) : '';
+    }
+  });
 
 // csycApp.controller('ForwardThinkingCtrl',[ '$scope', '$http', 'TreatmentFactory',
 // 	function($scope, $http, TreatmentFactory) {

@@ -32,7 +32,7 @@ class QuickSearchController extends \BaseController {
 
 		if(isset($first) && ($first != ''))
 		{
-			$concat .= ' MATCH(first) AGAINST (\''.$first.'*\' IN BOOLEAN MODE)';
+			$concat .= 'first LIKE \'%'.$first.'%\'';
 		}
 
 		if(isset($last) && ($last != ''))
@@ -41,7 +41,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= ' MATCH(last) AGAINST (\''.$last.'*\' IN BOOLEAN MODE)';
+			$concat .= 'last LIKE \'%'.$last.'%\'';
 		}
 
 		if(isset($street) && ($street != ''))

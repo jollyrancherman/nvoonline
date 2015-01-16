@@ -34,13 +34,13 @@ NVO Online - Quick Search
 						<option value="VOL">Volusia</option>
 					</select>
 				</div>
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.first" class="quicksearch-input form-control" placeholder="First Name">
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.last" class="quicksearch-input form-control" placeholder="Last Name">
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.street" class="quicksearch-input form-control" placeholder="Street">
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.city" class="quicksearch-input form-control" placeholder="City Name">
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.zip" class="quicksearch-input form-control" placeholder="Zip Name">
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.voter_id" class="quicksearch-input form-control" placeholder="Voter ID">
-				<input ng-model-options="{debounce: 250}" type="text" ng-change="query(search)" ng-model="search.birthday" class="quicksearch-input form-control" placeholder="Birthday">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.first" class="quicksearch-input form-control" placeholder="First Name">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.last" class="quicksearch-input form-control" placeholder="Last Name">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.street" class="quicksearch-input form-control" placeholder="Street">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.city" class="quicksearch-input form-control" placeholder="City Name">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.zip" class="quicksearch-input form-control" placeholder="Zip Name">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.voter_id" class="quicksearch-input form-control" placeholder="Voter ID">
+				<input ng-model-options="{debounce: 500}" type="text" ng-change="query(search)" ng-model="search.birthday" class="quicksearch-input form-control" placeholder="Birthday">
 			</form>
 			<div id="spinner"><i class="fa fa-spinner fa-spin fa-5x" style="color:blue"></i></div>
 		</div>

@@ -107,7 +107,7 @@ class QuickSearchController extends \BaseController {
 			$concat .= " birthday REGEXP '^".$birthday1."'";
 		}
 
-		$voter = VRFlorida::where('county','=', $county)->whereRaw($concat)->take(30)->get();
+		$voter = VRFlorida::where('county','=', $county)->whereRaw($concat)->take(50)->get();
 
 		return $voter;
 

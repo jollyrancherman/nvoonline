@@ -9,6 +9,9 @@ NVO Online - Quick Search
 	.quicksearch-input{
 		margin-bottom: 5px;
 	}
+	.voter-row:nth-child(even) {
+		background: #EEEEEE;
+	}
 </style>
 @stop
 
@@ -47,7 +50,7 @@ NVO Online - Quick Search
 
 		<div class="col-md-9">
 			<div ng-show="voters.length" >
-				<div class="row" ng-repeat="voter in voters">
+				<div class="row voter-row" ng-repeat="voter in voters">
 					<div class="col-sm-4">
 						@{{ voter.voter_id }}
 						@{{ voter.last | name_cap}},

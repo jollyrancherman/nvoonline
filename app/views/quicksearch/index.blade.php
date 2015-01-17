@@ -10,7 +10,7 @@ NVO Online - Quick Search
 		margin-bottom: 5px;
 	}
 	.voter-row:nth-child(even) {
-		background: #EEEEEE;
+		background: #EEEEEE ;
 	}
 </style>
 @stop
@@ -27,12 +27,13 @@ NVO Online - Quick Search
 						<option value="">County</option>
 						<option value="ALA">Alachua</option>
 						<option value="BRE">Brevard</option>
-						<option value="BRO">Broward Polk</option>
+						<option value="BRO">Broward</option>
 						<option value="LAK">Lake</option>
 						<option value="DAD">Miami-Dade</option>
 						<option value="ORA">Orange</option>
 						<option value="OSC">Osceola</option>
 						<option value="PAL">Palm Beach</option>
+						<option value="POL">Polk</option>
 						<option value="SEM">Seminole</option>
 						<option value="VOL">Volusia</option>
 					</select>

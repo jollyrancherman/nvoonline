@@ -26,7 +26,7 @@ class QuickSearchController extends \BaseController {
 
 
 		foreach ($i as $k => $v) {
-			$v1 = preg_replace("/[^A-Za-z0-9 %]/", '', $v);
+			$v1 = preg_replace("/[^A-Za-z0-9 -%]/", '', $v);
 			${$k} = $v1;
 		};
 
@@ -126,7 +126,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND';
 			}
-			$concat .= " birthday = ".$birthday."'";
+			$concat .= 'birthday LIKE \''.$birthday.'%\'';
 		}
 
 		$voter = DB::table($county)

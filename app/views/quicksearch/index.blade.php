@@ -31,6 +31,7 @@ NVO Online - Quick Search
 						<option value="CHA">Charlotte</option>
 						<option value="CLL">Collier</option>
 						<option value="LAK">Lake</option>
+						<option value="LEE">Lee</option>
 						<option value="DAD">Miami-Dade</option>
 						<option value="ORA">Orange</option>
 						<option value="OSC">Osceola</option>

@@ -1,5 +1,5 @@
-nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory',
-	function ($scope, $http, SearchFactory) {
+nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory','keyboardManager',
+	function ($scope, $http, SearchFactory,keyboardManager) {
 
 		$('#spinner').hide();
 
@@ -19,6 +19,27 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory',
 	 			}); 				;
 		};
 
+		keyboardManager.bind('ctrl+f', function() {
+				$('#fname').focus();
+		});
+		keyboardManager.bind('ctrl+l', function() {
+				$('#lname').focus();
+		});
+		keyboardManager.bind('ctrl+s', function() {
+				$('#street').focus();
+		});
+		keyboardManager.bind('ctrl+c', function() {
+				$('#city').focus();
+		});
+		keyboardManager.bind('ctrl+z', function() {
+				$('#zip').focus();
+		});
+		keyboardManager.bind('ctrl+v', function() {
+				$('#voter').focus();
+		});
+		keyboardManager.bind('ctrl+b', function() {
+				$('#birthday').focus();
+		});
 	}//end of Dependancy Injection
 ]);
 

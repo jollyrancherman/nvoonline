@@ -122,6 +122,7 @@ class QuickSearchController extends \BaseController {
 		{
 			$birthday1 = $birthday;
 			$month = '';
+
 			if(strlen($birthday) >= 2)
 			{
 				$date = $birthday;
@@ -133,6 +134,32 @@ class QuickSearchController extends \BaseController {
 				}
 				$concat .= 'MONTH(birthday) = \''.$month.'\'' ;
 			}
+
+			if(strlen($birthday) >= 4)
+			{
+				$date = $birthday;
+				$day = substr($date,2,2).'/'.substr($date,2);
+
+				if($concat != '')
+				{
+					$concat .= ' AND';
+				}
+				$concat .= 'DAY(birthday) = \''.$day.'\'' ;
+			}
+
+			if(strlen($birthday) >= 6)
+			{
+				$date = $birthday;
+				$year = substr($date,4,2).'/'.substr($date,2);
+
+				if($concat != '')
+				{
+					$concat .= ' AND';
+				}
+				$concat .= 'YEAR(birthday) = \'19'.$year.'\'' ;
+			}
+
+
 		}
 
 		$voter = DB::table($county)

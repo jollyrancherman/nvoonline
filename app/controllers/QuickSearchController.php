@@ -144,7 +144,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND';
 				}
-				$concat .= 'DAY(birthday) = \''.$day.'\'' ;
+				$concat .= ' DAY(birthday) = \''.$day.'\'' ;
 			}
 
 			if(strlen($birthday) >= 6)
@@ -156,7 +156,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND';
 				}
-				$concat .= 'YEAR(birthday) = \'19'.$year.'\'' ;
+				$concat .= ' YEAR(birthday) = \'19'.$year.'\'' ;
 			}
 
 
@@ -173,9 +173,9 @@ class QuickSearchController extends \BaseController {
 		// 	->orderBy('last', 'ASC ')
 		// 	->get();
 
-		$queries = DB::getQueryLog();
-		$last_query = end($queries);
-		dd($last_query);
+		// $queries = DB::getQueryLog();
+		// $last_query = end($queries);
+		// dd($last_query);
 
 		return $voter;
 

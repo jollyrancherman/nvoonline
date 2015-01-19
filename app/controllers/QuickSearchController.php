@@ -32,7 +32,7 @@ class QuickSearchController extends \BaseController {
 
 		if(isset($first) && ($first != ''))
 		{
-			$concat .= 'first LIKE \'%'.$first.'%\'';
+			$concat .= 'first LIKE \''.$first.'%\'';
 		}
 
 		if(isset($last) && ($last != ''))

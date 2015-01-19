@@ -41,7 +41,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'last LIKE \'%'.$last.'%\'';
+			$concat .= 'last LIKE \''.$last.'%\'';
 		}
 
 		if(isset($street) && ($street != ''))
@@ -54,7 +54,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND ';
 				}
-				$concat .= 'street LIKE \'%'.$v.'%\'';
+				$concat .= 'street LIKE \''.$v.'%\'';
 			}
 		}
 
@@ -64,7 +64,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'voter_id LIKE \'%'.$voter_id.'%\'';
+			$concat .= 'voter_id LIKE \''.$voter_id.'%\'';
 		}
 
 		if(isset($city) && ($city != ''))
@@ -82,7 +82,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'zipcode LIKE \'%'.$zip.'%\'';
+			$concat .= 'zipcode LIKE \''.$zip.'%\'';
 		}
 
 		if(isset($birthday) && ($birthday != ''))

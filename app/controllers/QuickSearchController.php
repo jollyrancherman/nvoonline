@@ -132,7 +132,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND';
 				}
-				$concat .= 'MONTH(birthday) = \''.$month.'\'' ;
+				$concat .= ' MONTH(birthday) = \''.$month.'\'' ;
 			}
 
 			if(strlen($birthday) >= 4)

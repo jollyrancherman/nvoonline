@@ -165,7 +165,7 @@ class QuickSearchController extends \BaseController {
 		$voter = DB::table($county)
 			->whereRaw($concat)
 			->take(50)
-			->orderBy('last', 'DESC')
+			->orderBy('last', 'ASC ')
 			->get();
 		// $voter = VRFlorida::where('county','=', $county)
 		// 	->whereRaw($concat)

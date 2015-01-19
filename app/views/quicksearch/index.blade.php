@@ -28,6 +28,8 @@ NVO Online - Quick Search
 						<option value="ALA">Alachua</option>
 						<option value="BRE">Brevard</option>
 						<option value="BRO">Broward</option>
+						<option value="CHA">Charlotte</option>
+						<option value="CLL">Collier</option>
 						<option value="LAK">Lake</option>
 						<option value="DAD">Miami-Dade</option>
 						<option value="ORA">Orange</option>

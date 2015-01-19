@@ -121,7 +121,7 @@ class QuickSearchController extends \BaseController {
 		if(isset($birthday) && ($birthday != ''))
 		{
 			$birthday1 = $birthday;
-
+			$month = '';
 			if(strlen($birthday) >= 2)
 			{
 				$date = $birthday;

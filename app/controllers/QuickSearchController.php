@@ -122,11 +122,17 @@ class QuickSearchController extends \BaseController {
 		{
 			$birthday1 = $birthday;
 
-			if($concat != '')
+			if(strlen($birthday) >= 2)
 			{
-				$concat .= ' AND';
+				$date = $birthday;
+				$month = substr($date,0,2).'/'.substr($date,2);
+
+				if($concat != '')
+				{
+					$concat .= ' AND';
+				}
+				$concat .= 'MONTH(birthday) = '$month ;
 			}
-			$concat .= 'birthday LIKE \''.$birthday.'%\'';
 		}
 
 		$voter = DB::table($county)

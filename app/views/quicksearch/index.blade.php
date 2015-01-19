@@ -37,6 +37,7 @@ NVO Online - Quick Search
 						<option value="OSC">Osceola</option>
 						<option value="PAL">Palm Beach</option>
 						<option value="POL">Polk</option>
+						<option value="SAR">Sarasota</option>
 						<option value="SEM">Seminole</option>
 						<option value="VOL">Volusia</option>
 					</select>
@@ -49,19 +50,19 @@ NVO Online - Quick Search
 						class="quicksearch-input form-control"
 						placeholder="First Name">
 				<input
-						id="mname"
-						ng-model-options="{debounce: 500}" type="text"
-						ng-change="query(search)"
-						ng-model="search.middle"
-						class="quicksearch-input form-control"
-						placeholder="Middle Name">
-				<input
 						id="lname"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.last"
 						class="quicksearch-input form-control"
 						placeholder="Last Name">
+				<input
+						id="mname"
+						ng-model-options="{debounce: 500}" type="text"
+						ng-change="query(search)"
+						ng-model="search.middle"
+						class="quicksearch-input form-control"
+						placeholder="Middle Name">
 				<input
 						id="street"
 						ng-model-options="{debounce: 500}" type="text"

@@ -44,7 +44,7 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory','keyboard
 				$('#birthday').focus();
 		});
 		keyboardManager.bind('ctrl+x', function() {
-				$(':input[text]').val('');
+				$(':input[type=text]').val('');
 				$('#fname').focus();
 		});
 	}//end of Dependancy Injection

@@ -48,56 +48,56 @@ NVO Online - Quick Search
 						ng-change="query(search)"
 						ng-model="search.first"
 						class="quicksearch-input form-control"
-						placeholder="First Name">
+						placeholder="First Name  ctrl+f">
 				<input
 						id="lname"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.last"
 						class="quicksearch-input form-control"
-						placeholder="Last Name">
+						placeholder="Last Name  ctrl+l">
 				<input
 						id="mname"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.middle"
 						class="quicksearch-input form-control"
-						placeholder="Middle Name">
+						placeholder="Middle Name  ctrl+m">
 				<input
 						id="street"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.street"
 						class="quicksearch-input form-control"
-						placeholder="Street">
+						placeholder="Street  ctrl+s">
 				<input
 						id="city"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.city"
 						class="quicksearch-input form-control"
-						placeholder="City Name">
+						placeholder="City ctrl+c">
 				<input
 						id="zip"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.zip"
 						class="quicksearch-input form-control"
-						placeholder="Zip Name">
+						placeholder="Zip  ctrl+z">
 				<input
 						id="voter"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.voter_id"
 						class="quicksearch-input form-control"
-						placeholder="Voter ID">
+						placeholder="Voter ID ctrl+v">
 				<input
 						id="birthday"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
 						ng-model="search.birthday"
 						class="quicksearch-input form-control"
-						placeholder="Birthday">
+						placeholder="Birthday (mmddyy) ctrl+b">
 			</form>
 			<div id="spinner"><i class="fa fa-spinner fa-spin fa-5x" style="color:blue"></i></div>
 		</div>

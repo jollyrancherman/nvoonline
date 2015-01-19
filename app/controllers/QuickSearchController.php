@@ -173,6 +173,10 @@ class QuickSearchController extends \BaseController {
 		// 	->orderBy('last', 'ASC ')
 		// 	->get();
 
+		$queries = DB::getQueryLog();
+		$last_query = end($queries);
+		dd($last_query);
+
 		return $voter;
 
 	}

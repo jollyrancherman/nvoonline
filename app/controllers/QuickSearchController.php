@@ -126,7 +126,7 @@ class QuickSearchController extends \BaseController {
 			if(strlen($birthday) >= 2)
 			{
 				$date = $birthday;
-				$month = substr($date,0,2).'/'.substr($date,2);
+				$month = substr($date,0,2);
 
 				if($concat != '')
 				{
@@ -138,7 +138,7 @@ class QuickSearchController extends \BaseController {
 			if(strlen($birthday) >= 4)
 			{
 				$date = $birthday;
-				$day = substr($date,2,2).'/'.substr($date,2);
+				$day = substr($date,2,2);
 
 				if($concat != '')
 				{
@@ -150,7 +150,7 @@ class QuickSearchController extends \BaseController {
 			if(strlen($birthday) >= 6)
 			{
 				$date = $birthday;
-				$year = substr($date,4,2).'/'.substr($date,2);
+				$year = substr($date,4,2);
 
 				if($concat != '')
 				{

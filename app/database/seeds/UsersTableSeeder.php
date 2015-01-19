@@ -65,5 +65,45 @@ class UsersTableSeeder extends Seeder {
                 'first_name' => 'SDGuest',
                 'last_name' => '4',
         ));
+        User::create(array(
+                'id' => 7,
+                'email' => 'lk1',
+                'password' => Hash::make('lk1'),
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+                'activated' => 1,
+                'first_name' => 'Lorianne',
+                'last_name' => 'Kaserman',
+        ));
+        User::create(array(
+                'id' => 8,
+                'email' => 'dk1',
+                'password' => Hash::make('dk1'),
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+                'activated' => 1,
+                'first_name' => 'David',
+                'last_name' => 'Kaserman',
+        ));
+        User::create(array(
+                'id' => 9,
+                'email' => 'lk2',
+                'password' => Hash::make('lk2'),
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+                'activated' => 1,
+                'first_name' => 'LKGuest',
+                'last_name' => '1',
+        ));
+        User::create(array(
+                'id' => 10,
+                'email' => 'lk3',
+                'password' => Hash::make('lk3'),
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+                'activated' => 1,
+                'first_name' => 'LKGuest',
+                'last_name' => '2',
+        ));
     }
 }

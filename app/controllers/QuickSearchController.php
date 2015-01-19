@@ -26,7 +26,8 @@ class QuickSearchController extends \BaseController {
 
 
 		foreach ($i as $k => $v) {
-			${$k} = preg_replace('/[A-Za-z0-9%]/', '', $v);
+			$v1 = preg_replace("/[^A-Za-z0-9 %]/", '', $v);
+			${$k} = $v1;
 		};
 
 		$concat = '';

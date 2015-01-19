@@ -44,6 +44,15 @@ class QuickSearchController extends \BaseController {
 			$concat .= 'last LIKE \''.$last.'%\'';
 		}
 
+		if(isset($middle) && ($middle != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'middle LIKE \''.$middle.'%\'';
+		}
+
 		if(isset($street) && ($street != ''))
 		{
 			$add_array = explode(' ', $street);

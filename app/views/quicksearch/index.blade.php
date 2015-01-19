@@ -58,7 +58,7 @@ NVO Online - Quick Search
 						ng-change="query(search)"
 						ng-model="search.middle"
 						class="quicksearch-input form-control"
-						placeholder="Last Name">
+						placeholder="Middle Name">
 				<input
 						id="street"
 						ng-model-options="{debounce: 500}" type="text"

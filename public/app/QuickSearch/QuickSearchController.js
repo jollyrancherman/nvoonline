@@ -19,6 +19,9 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory','keyboard
 	 			}); 				;
 		};
 
+		keyboardManager.bind('ctrl+o', function() {
+				$('#county').focus();
+		});
 		keyboardManager.bind('ctrl+f', function() {
 				$('#fname').focus();
 		});

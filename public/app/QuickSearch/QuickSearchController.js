@@ -47,8 +47,15 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory','keyboard
 				$('#birthday').focus();
 		});
 		keyboardManager.bind('ctrl+x', function() {
-				$(':input[type=text]').val('');
-				$scope.search = {};
+				// $(':input[type=text]').val('');
+				$scope.search.first = '';
+				$scope.search.last = '';
+				$scope.search.middle = '';
+				$scope.search.street = '';
+				$scope.search.city = '';
+				$scope.search.zip = '';
+				$scope.search.voter_id = '';
+				$scope.search.birthday = '';
 				$('#fname').focus();
 				$scope.voters = {};
 		});

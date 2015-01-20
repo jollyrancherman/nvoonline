@@ -48,6 +48,7 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory','keyboard
 		});
 		keyboardManager.bind('ctrl+x', function() {
 				$(':input[type=text]').val('');
+				$scope.search = {};
 				$('#fname').focus();
 				$scope.voters = {};
 		});

@@ -65,7 +65,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND ';
 				}
-				$concat .= 'street LIKE \''.$v.'%\'';
+				$concat .= 'street LIKE \'%'.$v.'%\'';
 			}
 		}
 

@@ -72,7 +72,7 @@ NVO Online - Quick Search
 						ng-change="query(search)"
 						ng-model="search.street"
 						class="quicksearch-input form-control"
-						placeholder="Street  ctrl+s">
+						placeholder="Address  ctrl+a">
 				<input
 						id="city"
 						ng-model-options="{debounce: 500}" type="text"

@@ -31,7 +31,7 @@ nvoApp.controller('QuickSearchCtrl', ['$scope','$http','SearchFactory','keyboard
 		keyboardManager.bind('ctrl+m', function() {
 				$('#mname').focus();
 		});
-		keyboardManager.bind('ctrl+s', function() {
+		keyboardManager.bind('ctrl+a', function() {
 				$('#street').focus();
 		});
 		keyboardManager.bind('ctrl+c', function() {

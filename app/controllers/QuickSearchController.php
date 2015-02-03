@@ -93,7 +93,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'zipcode LIKE \''.$zip.'%\'';
+			$concat .= 'zip LIKE \''.$zip.'%\'';
 		}
 
 		// if(isset($birthday) && ($birthday != ''))

@@ -30,6 +30,8 @@ NVO Online - Quick Search
 						<option value="BRO">Broward</option>
 						<option value="CHA">Charlotte</option>
 						<option value="CLL">Collier</option>
+						<option value="DUV">Duval</option>
+						<option value="HIL">Hillsborough</option>
 						<option value="LAK">Lake</option>
 						<option value="LEE">Lee</option>
 						<option value="MRT">Martin</option>
@@ -38,6 +40,8 @@ NVO Online - Quick Search
 						<option value="ORA">Orange</option>
 						<option value="OSC">Osceola</option>
 						<option value="PAL">Palm Beach</option>
+						<option value="PAS">Pasco</option>
+						<option value="PIN">Pinellas</option>
 						<option value="POL">Polk</option>
 						<option value="SAR">Sarasota</option>
 						<option value="SEM">Seminole</option>

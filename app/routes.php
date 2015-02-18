@@ -25,7 +25,8 @@ Route::group(['before' => 'auth'], function()
 	/*-----  End of QUICKSEARCH  ------*/
 
 
-
+	Route::get('/users/index' , 'UserController@index');
+	Route::get('/user/api/getAll' , 'UserController@getAll');
 
 
 
@@ -37,6 +38,8 @@ Route::get('login', function()
 {
 	return View::make('login.index');
 });
+
+
 
 
 

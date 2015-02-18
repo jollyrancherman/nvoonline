@@ -26,6 +26,21 @@
 					</a>
 				</li>
 
+				<!--Your Campaigns -->
+				<li>
+					<a href="/Tools">
+					<i class="fa fa-bar-chart"></i>
+					<span class="title">Your Campaigns</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="/quicksearch">
+							Florida</a>
+						</li>
+					</ul>
+				</li>
+
 				<!-- REPORTS -->
 				<li>
 					<a href="/Tools">
@@ -37,6 +52,21 @@
 						<li>
 							<a href="/quicksearch">
 							Quick Search</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Admin -->
+				<li>
+					<a href="/Tools">
+					<i class="fa fa-user"></i>
+					<span class="title">Admin</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="/users/index">
+							users</a>
 						</li>
 					</ul>
 				</li>

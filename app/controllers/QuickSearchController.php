@@ -84,7 +84,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= ' MATCH(city) AGAINST (\''.$city.'*\' IN BOOLEAN MODE)';
+			$concat .= 'city LIKE \''.$city.'%\'';
 		}
 
 		if(isset($zip) && ($zip != ''))

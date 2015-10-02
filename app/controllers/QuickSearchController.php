@@ -97,6 +97,15 @@ class QuickSearchController extends \BaseController {
 			$concat .= 'f12 LIKE \''.$zip.'%\'';
 		}
 
+		if(isset($birthday) && ($birthday != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'f22 LIKE \''.$birthday.'%\'';
+		}
+
 		// if(isset($birthday) && ($birthday != ''))
 		// {
 		// 	$birthday1 = $birthday;
@@ -119,49 +128,49 @@ class QuickSearchController extends \BaseController {
 		// 	$concat .= " birthday REGEXP '^".$birthday1."'";
 		// }
 
-		if(isset($birthday) && ($birthday != ''))
-		{
-			$birthday1 = $birthday;
-			$month = '';
+		// if(isset($birthday) && ($birthday != ''))
+		// {
+		// 	$birthday1 = $birthday;
+		// 	$month = '';
 
-			if(strlen($birthday) >= 2)
-			{
-				$date = $birthday;
-				$month = substr($date,0,2);
+		// 	if(strlen($birthday) >= 2)
+		// 	{
+		// 		$date = $birthday;
+		// 		$month = substr($date,0,2);
 
-				if($concat != '')
-				{
-					$concat .= ' AND';
-				}
-				$concat .= ' MONTH(f22) = \''.$month.'\'' ;
-			}
+		// 		if($concat != '')
+		// 		{
+		// 			$concat .= ' AND';
+		// 		}
+		// 		$concat .= ' MONTH(f22) = \''.$month.'\'' ;
+		// 	}
 
-			if(strlen($birthday) >= 4)
-			{
-				$date = $birthday;
-				$day = substr($date,2,2);
+		// 	if(strlen($birthday) >= 4)
+		// 	{
+		// 		$date = $birthday;
+		// 		$day = substr($date,2,2);
 
-				if($concat != '')
-				{
-					$concat .= ' AND';
-				}
-				$concat .= ' DAY(f22) = \''.$day.'\'' ;
-			}
+		// 		if($concat != '')
+		// 		{
+		// 			$concat .= ' AND';
+		// 		}
+		// 		$concat .= ' DAY(f22) = \''.$day.'\'' ;
+		// 	}
 
-			if(strlen($birthday) >= 6)
-			{
-				$date = $birthday;
-				$year = substr($date,4,2);
+		// 	if(strlen($birthday) >= 6)
+		// 	{
+		// 		$date = $birthday;
+		// 		$year = substr($date,4,2);
 
-				if($concat != '')
-				{
-					$concat .= ' AND';
-				}
-				$concat .= ' YEAR(f22) = \'19'.$year.'\'' ;
-			}
+		// 		if($concat != '')
+		// 		{
+		// 			$concat .= ' AND';
+		// 		}
+		// 		$concat .= ' YEAR(f22) = \'19'.$year.'\'' ;
+		// 	}
 
 
-		}
+		// }
 
 		$voter = DB::table($saveCounty)
 			->whereRaw($concat)

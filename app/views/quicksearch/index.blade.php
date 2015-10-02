@@ -150,7 +150,7 @@ NVO Online - Quick Search
 						ng-change="query(search)"
 						ng-model="search.birthday"
 						class="quicksearch-input form-control"
-						placeholder="Birthday (mmddyy) ctrl+b">
+						placeholder="Birthday (mm/dd/yyyy) ctrl+b">
 			</form>
 			<div id="spinner"><i class="fa fa-spinner fa-spin fa-5x" style="color:blue"></i></div>
 		</div>

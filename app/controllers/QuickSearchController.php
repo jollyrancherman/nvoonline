@@ -27,7 +27,7 @@ class QuickSearchController extends \BaseController {
 		$saveCounty = $i['county'];
 
 		foreach ($i as $k => $v) {
-			$v1 = preg_replace("/[^A-Za-z0-9 -%]/", '', $v);
+			$v1 = preg_replace("/[^A-Za-z0-9 \/ -%]/", '', $v);
 			${$k} = $v1;
 		};
 

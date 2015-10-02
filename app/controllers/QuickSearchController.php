@@ -34,7 +34,7 @@ class QuickSearchController extends \BaseController {
 
 		if(isset($first) && ($first != ''))
 		{
-			$concat .= 'first LIKE \''.$first.'%\'';
+			$concat .= 'f5 LIKE \''.$first.'%\'';
 		}
 
 		if(isset($last) && ($last != ''))
@@ -43,7 +43,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'last LIKE \''.$last.'%\'';
+			$concat .= 'f3 LIKE \''.$last.'%\'';
 		}
 
 		if(isset($middle) && ($middle != ''))
@@ -52,7 +52,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'middle LIKE \''.$middle.'%\'';
+			$concat .= 'f6 LIKE \''.$middle.'%\'';
 		}
 
 		if(isset($street) && ($street != ''))
@@ -65,7 +65,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND ';
 				}
-				$concat .= 'street LIKE \'%'.$v.'%\'';
+				$concat .= 'f8 LIKE \'%'.$v.'%\'';
 			}
 		}
 
@@ -75,7 +75,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'voter_id LIKE \''.$voter_id.'%\'';
+			$concat .= 'f2 LIKE \''.$voter_id.'%\'';
 		}
 
 		if(isset($city) && ($city != ''))
@@ -84,7 +84,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'city LIKE \''.$city.'%\'';
+			$concat .= 'f10 LIKE \''.$city.'%\'';
 		}
 
 		if(isset($zip) && ($zip != ''))
@@ -93,7 +93,7 @@ class QuickSearchController extends \BaseController {
 			{
 				$concat .= ' AND ';
 			}
-			$concat .= 'zip LIKE \''.$zip.'%\'';
+			$concat .= 'f12 LIKE \''.$zip.'%\'';
 		}
 
 		// if(isset($birthday) && ($birthday != ''))
@@ -132,7 +132,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND';
 				}
-				$concat .= ' MONTH(birthday) = \''.$month.'\'' ;
+				$concat .= ' MONTH(f22) = \''.$month.'\'' ;
 			}
 
 			if(strlen($birthday) >= 4)
@@ -144,7 +144,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND';
 				}
-				$concat .= ' DAY(birthday) = \''.$day.'\'' ;
+				$concat .= ' DAY(f22) = \''.$day.'\'' ;
 			}
 
 			if(strlen($birthday) >= 6)
@@ -156,7 +156,7 @@ class QuickSearchController extends \BaseController {
 				{
 					$concat .= ' AND';
 				}
-				$concat .= ' YEAR(birthday) = \'19'.$year.'\'' ;
+				$concat .= ' YEAR(f22) = \'19'.$year.'\'' ;
 			}
 
 
@@ -165,7 +165,7 @@ class QuickSearchController extends \BaseController {
 		$voter = DB::table($county)
 			->whereRaw($concat)
 			->take(50)
-			->orderBy('last', 'ASC ')
+			->orderBy('f3', 'ASC ')
 			->get();
 		// $voter = VRFlorida::where('county','=', $county)
 		// 	->whereRaw($concat)

@@ -24,6 +24,7 @@ class QuickSearchController extends \BaseController {
 		$input = Input::all();
 		$i = $input['params'];
 
+		$saveCounty = $i['county'];
 
 		foreach ($i as $k => $v) {
 			$v1 = preg_replace("/[^A-Za-z0-9 -%]/", '', $v);
@@ -162,7 +163,7 @@ class QuickSearchController extends \BaseController {
 
 		}
 
-		$voter = DB::table($county)
+		$voter = DB::table($saveCounty)
 			->whereRaw($concat)
 			->take(50)
 			->orderBy('f3', 'ASC ')

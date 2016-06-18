@@ -22,7 +22,7 @@
 				<li class="start ">
 					<a href="/dashboard">
 					<i class="fa fa-home"></i>
-					<span class="title">Dashboards</span>
+					<span class="title">Dashboard</span>
 					</a>
 				</li>
 
@@ -38,11 +38,9 @@
 							<a href="/quicksearch">
 							Florida</a>
 						</li>
-					</ul>
-					<ul class="sub-menu">
 						<li>
 							<a href="/ohio">
-							Ohio</a>
+							ohio</a>
 						</li>
 					</ul>
 				</li>

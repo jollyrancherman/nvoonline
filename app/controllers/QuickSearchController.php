@@ -13,6 +13,11 @@ class QuickSearchController extends \BaseController {
 		return View::make('quicksearch.index');
 	}
 
+	public function index()
+	{
+		return View::make('quicksearch.ohio');
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 * GET /quicksearch/create

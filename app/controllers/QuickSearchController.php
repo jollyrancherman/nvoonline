@@ -13,7 +13,7 @@ class QuickSearchController extends \BaseController {
 		return View::make('quicksearch.index');
 	}
 
-	public function index()
+	public function ohio()
 	{
 		return View::make('quicksearch.ohio');
 	}

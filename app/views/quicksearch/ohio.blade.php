@@ -181,7 +181,7 @@ NVO Online - Quick Search
 			<div ng-show="voters.length" >
 				<div class="row voter-row" ng-repeat="voter in voters">
 					<div class="col-sm-4">
-						@{{ voter.sos_voter_id }}
+						@{{ voter.sos_voterid }}
 						@{{ voter.last_name | name_cap}},
 						@{{ voter.first_name  | name_cap}}
 						@{{ voter.middle_name  | name_cap}}

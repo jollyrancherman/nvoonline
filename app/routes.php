@@ -21,6 +21,9 @@ Route::group(['before' => 'auth'], function()
 	Route::get('/quicksearch', ['as' => 'quicksearch', 'uses' => 'QuickSearchController@index']);
 	Route::post('/quicksearch/api', ['as' => 'quicksearch', 'uses' => 'QuickSearchController@api']);
 
+	Route::get('/ohio', ['as' => 'ohio', 'uses' => 'QuickSearchController@ohio']);
+	Route::post('/ohio/api', ['as' => 'ohio', 'uses' => 'QuickSearchController@ohioAPI']);
+
 
 	/*-----  End of QUICKSEARCH  ------*/
 

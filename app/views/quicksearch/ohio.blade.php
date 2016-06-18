@@ -184,7 +184,7 @@ NVO Online - Quick Search
 						@{{ voter.sos_voter_id }}
 						@{{ voter.last_name | name_cap}},
 						@{{ voter.first_name  | name_cap}}
-						@{{ voter.f6  | name_cap}}
+						@{{ voter.middle_name  | name_cap}}
 					</div>
 					<div class="col-sm-5">@{{ voter.residential_address1 }} @{{ voter.residential_city }}, @{{ voter.residential_state | name_cap }} @{{ voter.residential_zip }}</div>
 					<div class="col-sm-3">@{{ voter.date_of_birth }}</div>

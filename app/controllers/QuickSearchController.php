@@ -285,7 +285,7 @@ class QuickSearchController extends \BaseController {
 		$voter = DB::table($saveCounty)
 			->whereRaw($concat)
 			->take(50)
-			->orderBy('f3', 'ASC ')
+			->orderBy('last_name', 'ASC ')
 			->get();
 
 		return $voter;

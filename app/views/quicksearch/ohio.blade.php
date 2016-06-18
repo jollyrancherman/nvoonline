@@ -121,7 +121,7 @@ NVO Online - Quick Search
 						id="fname"
 						ng-model-options="{debounce: 500}" type="text"
 						ng-change="query(search)"
-						ng-model="search.first
+						ng-model="search.first"
 						class="quicksearch-input form-control"
 						placeholder="First Name  ctrl+f">
 				<input

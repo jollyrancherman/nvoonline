@@ -67,7 +67,8 @@ nvoApp.factory('SearchFactory', ['$http',
 	function ($http) {
 		return	{
 			getResults: function(array){
-				return $http.post('/quicksearch/api', {
+				return $http.post('/ohio/api', {
+				// return $http.post('/quicksearch/api', {
 					params: array
 				});
 			}

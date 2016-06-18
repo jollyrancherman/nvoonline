@@ -195,7 +195,102 @@ class QuickSearchController extends \BaseController {
 		return $voter;
 
 	}
+	public function ohioAPI()
+	{
+		$input = Input::all();
+		$i = $input['params'];
 
+		$saveCounty = $i['county'];
+
+		foreach ($i as $k => $v) {
+			$v1 = preg_replace("/[^A-Za-z0-9 \/ -%]/", '', $v);
+			${$k} = $v1;
+		};
+
+		$concat = '';
+
+		if(isset($first) && ($first != ''))
+		{
+			$concat .= 'first_name LIKE \''.$first.'%\'';
+		}
+
+		if(isset($last) && ($last != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'last_name LIKE \''.$last.'%\'';
+		}
+
+		if(isset($middle) && ($middle != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'middle_name LIKE \''.$middle.'%\'';
+		}
+
+		if(isset($street) && ($street != ''))
+		{
+			$add_array = explode(' ', $street);
+
+			foreach ($add_array as $v)
+			{
+				if($concat != '')
+				{
+					$concat .= ' AND ';
+				}
+				$concat .= 'residential_address1 LIKE \'%'.$v.'%\'';
+			}
+		}
+
+		if(isset($voter_id) && ($voter_id != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'sos_voterid LIKE \''.$voter_id.'%\'';
+		}
+
+		if(isset($city) && ($city != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'residential_city LIKE \''.$city.'%\'';
+		}
+
+		if(isset($zip) && ($zip != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'residential_zip LIKE \''.$zip.'%\'';
+		}
+
+		if(isset($birthday) && ($birthday != ''))
+		{
+			if($concat != '')
+			{
+				$concat .= ' AND ';
+			}
+			$concat .= 'date_of_birth LIKE \''.$birthday.'%\'';
+		}
+
+		$voter = DB::table($saveCounty)
+			->whereRaw($concat)
+			->take(50)
+			->orderBy('f3', 'ASC ')
+			->get();
+
+		return $voter;
+
+	}
 	/**
 	 * Store a newly created resource in storage.
 	 * POST /quicksearch

@@ -22,7 +22,7 @@
 				<li class="start ">
 					<a href="/dashboard">
 					<i class="fa fa-home"></i>
-					<span class="title">Dashboard</span>
+					<span class="title">Dashboards</span>
 					</a>
 				</li>
 

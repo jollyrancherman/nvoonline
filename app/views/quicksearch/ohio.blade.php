@@ -181,13 +181,13 @@ NVO Online - Quick Search
 			<div ng-show="voters.length" >
 				<div class="row voter-row" ng-repeat="voter in voters">
 					<div class="col-sm-4">
-						@{{ voter.f2 }}
-						@{{ voter.f3 | name_cap}},
-						@{{ voter.f5  | name_cap}}
+						@{{ voter.sos_voter_id }}
+						@{{ voter.last_name | name_cap}},
+						@{{ voter.first_name  | name_cap}}
 						@{{ voter.f6  | name_cap}}
 					</div>
-					<div class="col-sm-5">@{{ voter.f8 }} @{{ voter.f9 }}, @{{ voter.f10 | name_cap }} @{{ voter.f12 }}</div>
-					<div class="col-sm-3">@{{ voter.f22 }}</div>
+					<div class="col-sm-5">@{{ voter.residential_address1 }} @{{ residential_city.f9 }}, @{{ residential_state.f10 | name_cap }} @{{ voter.residential_zip }}</div>
+					<div class="col-sm-3">@{{ voter.date_of_birth }}</div>
 				</div>
 			</div>
 			<div ng-show="!voters.length"><h3>No Results Found</h3></div>

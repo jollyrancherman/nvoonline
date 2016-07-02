@@ -12,6 +12,10 @@ NVO Online - Quick Search
 	.voter-row:nth-child(even) {
 		background: #EEEEEE ;
 	}
+
+	.county.name{
+		text-transform: capitalize;
+	}
 </style>
 @stop
 
@@ -24,96 +28,96 @@ NVO Online - Quick Search
 			<form class="sidebar-search">
 				<div class="form-group">
 					<select id="county"  ng-change="query(search)" ng-model="search.county" name="county" class="form-control">
-						<option value="">County ctrl+o</option>
+						<option class="county-name" value="">County ctrl+o</option>
 
-						<option value="oh_adams">adams</option>
-						<option value="oh_allen">allen</option>
-						<option value="oh_ashland">ashland</option>
-						<option value="oh_ashtabula">ashtabula</option>
-						<option value="oh_athens">athens</option>
-						<option value="oh_auglaize">auglaize</option>
-						<option value="oh_belmont">belmont</option>
-						<option value="oh_brown">brown</option>
-						<option value="oh_butler">butler</option>
-						<option value="oh_carroll">carroll</option>
-						<option value="oh_champaign">champaign</option>
-						<option value="oh_clark">clark</option>
-						<option value="oh_clermont">clermont</option>
-						<option value="oh_clinton">clinton</option>
-						<option value="oh_columbiana">columbiana</option>
-						<option value="oh_coshocton">coshocton</option>
-						<option value="oh_crawford">crawford</option>
-						<option value="oh_cuyahoga">cuyahoga</option>
-						<option value="oh_darke">darke</option>
-						<option value="oh_defiance">defiance</option>
-						<option value="oh_delaware">delaware</option>
-						<option value="oh_erie">erie</option>
-						<option value="oh_fairfield">fairfield</option>
-						<option value="oh_fayette">fayette</option>
-						<option value="oh_franklin">franklin</option>
-						<option value="oh_fulton">fulton</option>
-						<option value="oh_gallia">gallia</option>
-						<option value="oh_geauga">geauga</option>
-						<option value="oh_greene">greene</option>
-						<option value="oh_guernsey">guernsey</option>
-						<option value="oh_hamilton">hamilton</option>
-						<option value="oh_hancock">hancock</option>
-						<option value="oh_hardin">hardin</option>
-						<option value="oh_harrison">harrison</option>
-						<option value="oh_henry">henry</option>
-						<option value="oh_highland">highland</option>
-						<option value="oh_hocking">hocking</option>
-						<option value="oh_holmes">holmes</option>
-						<option value="oh_huron">huron</option>
-						<option value="oh_jackson">jackson</option>
-						<option value="oh_jefferson">jefferson</option>
-						<option value="oh_knox">knox</option>
-						<option value="oh_lake">lake</option>
-						<option value="oh_lawrence">lawrence</option>
-						<option value="oh_licking">licking</option>
-						<option value="oh_logan">logan</option>
-						<option value="oh_lorain">lorain</option>
-						<option value="oh_lucas">lucas</option>
-						<option value="oh_madison">madison</option>
-						<option value="oh_mahoning">mahoning</option>
-						<option value="oh_marion">marion</option>
-						<option value="oh_medina">medina</option>
-						<option value="oh_meigs">meigs</option>
-						<option value="oh_mercer">mercer</option>
-						<option value="oh_miami">miami</option>
-						<option value="oh_monroe">monroe</option>
-						<option value="oh_montgomery">montgomery</option>
-						<option value="oh_morgan">morgan</option>
-						<option value="oh_morrow">morrow</option>
-						<option value="oh_muskingum">muskingum</option>
-						<option value="oh_noble">noble</option>
-						<option value="oh_ottawa">ottawa</option>
-						<option value="oh_paulding">paulding</option>
-						<option value="oh_perry">perry</option>
-						<option value="oh_pickaway">pickaway</option>
-						<option value="oh_pike">pike</option>
-						<option value="oh_portage">portage</option>
-						<option value="oh_preble">preble</option>
-						<option value="oh_putnam">putnam</option>
-						<option value="oh_richland">richland</option>
-						<option value="oh_ross">ross</option>
-						<option value="oh_sandusky">sandusky</option>
-						<option value="oh_scioto">scioto</option>
-						<option value="oh_seneca">seneca</option>
-						<option value="oh_shelby">shelby</option>
-						<option value="oh_stark">stark</option>
-						<option value="oh_summit">summit</option>
-						<option value="oh_trumbull">trumbull</option>
-						<option value="oh_tuscarawas">tuscarawas</option>
-						<option value="oh_union">union</option>
-						<option value="oh_vanwert">vanwert</option>
-						<option value="oh_vinton">vinton</option>
-						<option value="oh_warren">warren</option>
-						<option value="oh_washington">washington</option>
-						<option value="oh_wayne">wayne</option>
-						<option value="oh_williams">williams</option>
-						<option value="oh_wood">wood</option>
-						<option value="oh_wyandot">wyandot</option>
+						<option class="county-name" value="oh_adams">Adams</option>
+						<option class="county-name" value="oh_allen">Allen</option>
+						<option class="county-name" value="oh_ashland">Ashland</option>
+						<option class="county-name" value="oh_ashtabula">Ashtabula</option>
+						<option class="county-name" value="oh_athens">Athens</option>
+						<option class="county-name" value="oh_auglaize">Auglaize</option>
+						<option class="county-name" value="oh_belmont">Belmont</option>
+						<option class="county-name" value="oh_brown">Brown</option>
+						<option class="county-name" value="oh_butler">Butler</option>
+						<option class="county-name" value="oh_carroll">Carroll</option>
+						<option class="county-name" value="oh_champaign">Champaign</option>
+						<option class="county-name" value="oh_clark">Clark</option>
+						<option class="county-name" value="oh_clermont">Clermont</option>
+						<option class="county-name" value="oh_clinton">Clinton</option>
+						<option class="county-name" value="oh_columbiana">Columbiana</option>
+						<option class="county-name" value="oh_coshocton">Coshocton</option>
+						<option class="county-name" value="oh_crawford">Crawford</option>
+						<option class="county-name" value="oh_cuyahoga">Cuyahoga</option>
+						<option class="county-name" value="oh_darke">Darke</option>
+						<option class="county-name" value="oh_defiance">Defiance</option>
+						<option class="county-name" value="oh_delaware">Delaware</option>
+						<option class="county-name" value="oh_erie">Erie</option>
+						<option class="county-name" value="oh_fairfield">Fairfield</option>
+						<option class="county-name" value="oh_fayette">Fayette</option>
+						<option class="county-name" value="oh_franklin">Franklin</option>
+						<option class="county-name" value="oh_fulton">Fulton</option>
+						<option class="county-name" value="oh_gallia">Gallia</option>
+						<option class="county-name" value="oh_geauga">Geauga</option>
+						<option class="county-name" value="oh_greene">Greene</option>
+						<option class="county-name" value="oh_guernsey">Guernsey</option>
+						<option class="county-name" value="oh_hamilton">Hamilton</option>
+						<option class="county-name" value="oh_hancock">Hancock</option>
+						<option class="county-name" value="oh_hardin">Hardin</option>
+						<option class="county-name" value="oh_harrison">Harrison</option>
+						<option class="county-name" value="oh_henry">Henry</option>
+						<option class="county-name" value="oh_highland">Highland</option>
+						<option class="county-name" value="oh_hocking">Hocking</option>
+						<option class="county-name" value="oh_holmes">Holmes</option>
+						<option class="county-name" value="oh_huron">Huron</option>
+						<option class="county-name" value="oh_jackson">Jackson</option>
+						<option class="county-name" value="oh_jefferson">Jefferson</option>
+						<option class="county-name" value="oh_knox">Knox</option>
+						<option class="county-name" value="oh_lake">lake</option>
+						<option class="county-name" value="oh_lawrence">lawrence</option>
+						<option class="county-name" value="oh_loh_icking">licking</option>
+						<option class="county-name" value="oh_logan">logan</option>
+						<option class="county-name" value="oh_lorain">lorain</option>
+						<option class="county-name" value="oh_lucas">lucas</option>
+						<option class="county-name" value="oh_madison">madison</option>
+						<option class="county-name" value="oh_mahoning">mahoning</option>
+						<option class="county-name" value="oh_marion">marion</option>
+						<option class="county-name" value="oh_medina">medina</option>
+						<option class="county-name" value="oh_meigs">meigs</option>
+						<option class="county-name" value="oh_mercer">mercer</option>
+						<option class="county-name" value="oh_miami">miami</option>
+						<option class="county-name" value="oh_monroe">monroe</option>
+						<option class="county-name" value="oh_montgomery">montgomery</option>
+						<option class="county-name" value="oh_morgan">morgan</option>
+						<option class="county-name" value="oh_morrow">morrow</option>
+						<option class="county-name" value="oh_muskingum">muskingum</option>
+						<option class="county-name" value="oh_noble">noble</option>
+						<option class="county-name" value="oh_ottawa">ottawa</option>
+						<option class="county-name" value="oh_paulding">paulding</option>
+						<option class="county-name" value="oh_perry">perry</option>
+						<option class="county-name" value="oh_pickaway">pickaway</option>
+						<option class="county-name" value="oh_pike">pike</option>
+						<option class="county-name" value="oh_portage">portage</option>
+						<option class="county-name" value="oh_preble">preble</option>
+						<option class="county-name" value="oh_putnam">putnam</option>
+						<option class="county-name" value="oh_richland">richland</option>
+						<option class="county-name" value="oh_ross">ross</option>
+						<option class="county-name" value="oh_sandusky">sandusky</option>
+						<option class="county-name" value="oh_scioto">scioto</option>
+						<option class="county-name" value="oh_seneca">seneca</option>
+						<option class="county-name" value="oh_shelby">shelby</option>
+						<option class="county-name" value="oh_stark">stark</option>
+						<option class="county-name" value="oh_summit">summit</option>
+						<option class="county-name" value="oh_trumbull">trumbull</option>
+						<option class="county-name" value="oh_tuscarawas">tuscarawas</option>
+						<option class="county-name" value="oh_union">union</option>
+						<option class="county-name" value="oh_vanwert">vanwert</option>
+						<option class="county-name" value="oh_vinton">vinton</option>
+						<option class="county-name" value="oh_warren">warren</option>
+						<option class="county-name" value="oh_washington">washington</option>
+						<option class="county-name" value="oh_wayne">wayne</option>
+						<option class="county-name" value="oh_williams">williams</option>
+						<option class="county-name" value="oh_wood">wood</option>
+						<option class="county-name" value="oh_wyandot">wyandot</option>
 
 					</select>
 				</div>

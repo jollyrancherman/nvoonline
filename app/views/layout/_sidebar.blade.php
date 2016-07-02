@@ -40,7 +40,7 @@
 						</li>
 						<li>
 							<a href="/ohio">
-							ohio</a>
+							Ohio</a>
 						</li>
 					</ul>
 				</li>
